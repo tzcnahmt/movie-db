@@ -1,0 +1,329 @@
+/* Box sizing rules */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body,
+html {
+  width: 100%;
+  min-height: 100vh;
+  background-color: black;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  font-family: 'Open Sans', serif;
+  line-height: 1.5;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(195, 195, 195);
+  transition: color 0.15s ease-in-out;
+}
+a:hover {
+  color: #f5c518;
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: white;
+  overflow: hidden;
+}
+.navbar {
+  width: 100%;
+  background-color: rgb(26, 26, 26);
+}
+.navbar .nav-container {
+  margin: 0 auto;
+  max-width: 1380px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+}
+.navbar .nav-logo p {
+  color: #f5c518;
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 3rem;
+}
+.navbar li {
+  cursor: pointer;
+}
+.main-content {
+  max-width: 1440px;
+  margin: 75px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 0 15px;
+}
+.movie-card {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: transform 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-poster {
+  position: relative;
+}
+
+.movie-title {
+  padding: 1rem 1rem;
+  background-color: rgb(26, 26, 26);
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.movie-title p:first-child {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.movie-title p:last-child {
+  font-size: 0.83rem;
+  font-weight: 500;
+}
+
+.vote-average {
+  font-size: 1.5rem;
+  left: 10px;
+  top: 10px;
+  position: absolute;
+  font-weight: 700;
+}
+
+.vote-average span {
+  color: #f5c518;
+  margin-right: 5px;
+}
+
+.search-box {
+  margin: 5rem auto 0 auto;
+  width: 100%;
+  max-width: 1280px;
+  height: 12rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem 1rem 2rem;
+  background-repeat: no-repeat;
+  background-position: 50% 82%;
+  gap: 20px;
+}
+.search-box h1 {
+  text-align: center;
+}
+.search-box input {
+  width: 100%;
+  max-width: 450px;
+  height: 3.25rem;
+  padding: 5px 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.drop-filter {
+  position: relative;
+}
+
+.dropdown-content {
+  position: absolute;
+  width: 350px;
+  height: 110px;
+  border-radius: 5px;
+  top: 100%;
+  background-color: rgb(85, 85, 85);
+  color: white;
+  z-index: 9999;
+  display: none;
+}
+.dropdown-content p {
+  display: block;
+  color: white;
+  padding: 5px 10px;
+}
+.dropdown-content p:hover {
+  background-color: rgb(59, 59, 59);
+  color: #f5c518;
+  cursor: pointer;
+}
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.movie-details {
+  width: 100%;
+  max-width: 1280px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #363636;
+  margin-bottom: 5rem;
+}
+.detail-img {
+  width: 100%;
+  min-height: 450px;
+  max-width: 1280px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+}
+.detail-img div {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  max-width: 700px;
+}
+.detail-img div h2 {
+  line-height: 1;
+  font-size: 3.5rem;
+}
+.detail-img div > * {
+  margin-bottom: 0.5rem;
+}
+.watch-button {
+  background: orange;
+  color: white;
+  font-weight: 700;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+.add-list-button {
+  background: transparent;
+  color: white;
+  font-weight: 700;
+  padding: 10px 20px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin-top: 1.5rem;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+.add-list-button:hover {
+  background: white;
+  color: black;
+}
+
+.movie-actors h1 {
+  font-size: 4rem;
+  padding-left: 15px;
+  border-left: 10px solid orange;
+  margin-bottom: 3rem;
+}
+.movie-actors-img {
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 5rem;
+}
+.movie-actors-img div {
+  width: 200px;
+  /* border: 1px solid red; */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.movie-actors-img div p {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.movie-actors-img div .actor-img {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+.similar-movies {
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+.actor-title {
+  width: 100%;
+  max-width: 1280px;
+
+  font-size: 4rem;
+  padding-left: 15px;
+  border-left: 10px solid orange;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 960px) {
+  .detail-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+  }
+}
